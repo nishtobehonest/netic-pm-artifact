@@ -8,19 +8,19 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #0d0d0d;
-      --surface:   #1a1a1a;
-      --border:    #242424;
-      --text:      #e8e8e8;
-      --muted:     #888;
-      --dim:       #555;
-      --accent:    #00C2A8;
-      --accent-bg: rgba(0, 194, 168, 0.08);
-      --amber:     #F59E0B;
-      --amber-bg:  rgba(245, 158, 11, 0.08);
-      --red:       #EF4444;
-      --red-bg:    rgba(239, 68, 68, 0.08);
-      --green:     #22C55E;
+      --bg:        #f7f7f7;
+      --surface:   #ffffff;
+      --border:    #e4e4e4;
+      --text:      #111111;
+      --muted:     #666666;
+      --dim:       #aaaaaa;
+      --accent:    #009E89;
+      --accent-bg: rgba(0, 158, 137, 0.08);
+      --amber:     #B45309;
+      --amber-bg:  rgba(180, 83, 9, 0.07);
+      --red:       #B91C1C;
+      --red-bg:    rgba(185, 28, 28, 0.07);
+      --green:     #15803D;
       --nav-h:     72px;
     }
 
@@ -41,7 +41,7 @@
       top: 0; left: 0; right: 0;
       z-index: 200;
       height: var(--nav-h);
-      background: rgba(13, 13, 13, 0.96);
+      background: rgba(247, 247, 247, 0.97);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       display: flex;
@@ -87,7 +87,7 @@
     .tab-btn.active {
       background: var(--accent);
       border-color: var(--accent);
-      color: #0d0d0d;
+      color: #ffffff;
       font-weight: 600;
     }
 
@@ -129,7 +129,7 @@
       font-size: 34px;
       font-weight: 700;
       line-height: 1.2;
-      color: #fff;
+      color: var(--text);
       margin-bottom: 16px;
       letter-spacing: -0.02em;
     }
@@ -221,7 +221,7 @@
       background: var(--red-bg);
     }
 
-    .callout strong { color: #fff; }
+    .callout strong { color: var(--text); }
 
     /* ── Pipeline diagram ── */
     .pipeline {
@@ -301,7 +301,7 @@
     .bcard h3 {
       font-size: 15px;
       font-weight: 700;
-      color: #fff;
+      color: var(--text);
       margin-bottom: 10px;
       line-height: 1.3;
     }
@@ -351,9 +351,9 @@
       white-space: nowrap;
     }
 
-    .phase-pill.p1 { background: rgba(0, 194, 168, 0.12); color: var(--accent); }
-    .phase-pill.p2 { background: rgba(245, 158, 11, 0.12); color: var(--amber); }
-    .phase-pill.p3 { background: rgba(139, 92, 246, 0.12); color: #A78BFA; }
+    .phase-pill.p1 { background: rgba(0, 158, 137, 0.10); color: var(--accent); }
+    .phase-pill.p2 { background: rgba(180, 83, 9, 0.10); color: var(--amber); }
+    .phase-pill.p3 { background: rgba(109, 40, 217, 0.10); color: #6D28D9; }
 
     /* ── Before/after ── */
     .ba-table {
@@ -384,7 +384,7 @@
       line-height: 1.5;
     }
 
-    .ba-table td:first-child { font-weight: 600; color: #ccc; font-size: 13px; }
+    .ba-table td:first-child { font-weight: 600; color: var(--text); font-size: 13px; }
     .ba-table td.col-before  { color: var(--muted); }
     .ba-table td.col-after   { color: var(--text); }
     .ba-table tr:last-child td { border-bottom: none; }
@@ -417,7 +417,7 @@
     .metric-card h3 {
       font-size: 15px;
       font-weight: 700;
-      color: #fff;
+      color: var(--text);
       margin-bottom: 8px;
       line-height: 1.3;
     }
@@ -447,7 +447,7 @@
       font-size: 14px;
     }
 
-    .li-row .li-metric { font-weight: 600; color: #fff; flex: 1; }
+    .li-row .li-metric { font-weight: 600; color: var(--text); flex: 1; }
     .li-row .li-target { font-size: 13px; color: var(--accent); white-space: nowrap; }
 
     /* ── Failure mode table ── */
@@ -500,7 +500,7 @@
     .analogue-card .proj-name {
       font-size: 14px;
       font-weight: 700;
-      color: #fff;
+      color: var(--text);
       margin-bottom: 6px;
     }
 
@@ -642,7 +642,7 @@
 
     .cover-badge {
       background: var(--surface);
-      border: 1px solid #333;
+      border: 1px solid var(--border);
       border-radius: 20px;
       font-size: 11px;
       font-weight: 700;
@@ -711,8 +711,8 @@
     }
 
     .cover-card {
-      background: #131313;
-      border: 1px solid #2a2a2a;
+      background: #f0f0f0;
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 24px;
     }
@@ -720,7 +720,7 @@
     .cover-card-name {
       font-size: 17px;
       font-weight: 700;
-      color: #fff;
+      color: var(--text);
       margin-bottom: 10px;
     }
 
