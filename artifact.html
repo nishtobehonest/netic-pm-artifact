@@ -625,6 +625,142 @@
       line-height: 1.6;
     }
 
+    /* ── Cover section ── */
+    .cover-section {
+      margin-bottom: 52px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cover-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .cover-badge {
+      background: var(--surface);
+      border: 1px solid #333;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text);
+      padding: 6px 14px;
+      white-space: nowrap;
+    }
+
+    .cover-sep { color: var(--dim); }
+
+    .cover-role {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .cover-body {
+      display: grid;
+      grid-template-columns: 1fr 268px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (max-width: 740px) { .cover-body { grid-template-columns: 1fr; } }
+
+    .cover-context {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+
+    .cover-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 22px;
+    }
+
+    .cover-hypothesis-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .cover-hypothesis-text {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .cover-highlight {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .cover-disclaimer {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .cover-card {
+      background: #131313;
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .cover-card-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .cover-card-bio {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .cover-card-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 16px 0;
+    }
+
+    .cover-card-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .cover-card-link {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .cover-card-link:hover { text-decoration: underline; }
+
+    .cover-card-date {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dim);
+    }
+
     /* ── Placeholder (Phase 1 shell) ── */
     .placeholder {
       background: var(--surface);
@@ -685,6 +821,35 @@
 </nav>
 
 <main>
+
+  <!-- ── Cover / Brief Header ── -->
+  <div class="cover-section">
+    <div class="cover-header">
+      <span class="cover-badge">Agent PM Hypothesis</span>
+      <span class="cover-sep">·</span>
+      <span class="cover-role">Agent Product Manager · Netic</span>
+    </div>
+    <div class="cover-body">
+      <div class="cover-left">
+        <p class="cover-context">Submitted as part of my application — to show how I think about a specific, publicly observable gap in Netic's product stack, not just describe how I'd approach product work in general.</p>
+        <hr class="cover-rule">
+        <div class="cover-hypothesis-label">Hypothesis</div>
+        <p class="cover-hypothesis-text">Netic has solved first-mile — customer to booked job. The gap is the <span class="cover-highlight">technician data black hole</span>. Intelligence from the Netic Brain stops at the dispatcher. Technicians arrive blind, upsells are inconsistent, and post-job outcomes never feed back to improve the Cultivate Engine. Netic optimizes for job count — the opportunity is job value.</p>
+        <p class="cover-disclaimer">I may be wrong on some of this. That's what the conversation is for.</p>
+      </div>
+      <div class="cover-card">
+        <div class="cover-card-name">Nishchay Vishwanath</div>
+        <div class="cover-card-bio">Cornell MEM · PM and builder with 3 years shipping AI agents and field intelligence products across HVAC, enterprise SaaS, and physical operations.</div>
+        <hr class="cover-card-rule">
+        <div class="cover-card-contact">
+          <a href="mailto:nv268@cornell.edu" class="cover-card-link">✉&nbsp; nv268@cornell.edu</a>
+          <a href="https://linkedin.com/in/nishchay-v" class="cover-card-link">↗&nbsp; linkedin.com/in/nishchay-v</a>
+        </div>
+        <hr class="cover-card-rule">
+        <div class="cover-card-date">June 2026</div>
+      </div>
+    </div>
+  </div>
 
   <!-- ════════════════════════════════════════
        TAB 1 · THE PROBLEM
