@@ -784,6 +784,87 @@
       .hero h1 { font-size: 24px; }
       nav { padding: 0 16px; gap: 4px; }
     }
+
+    /* ── Reader tag ── */
+    .reader-tag {
+      font-size: 12px;
+      color: var(--dim);
+      font-style: italic;
+    }
+
+    /* ── Customer persona card (Marcus) ── */
+    .customer-persona-card {
+      border-left: 3px solid var(--accent);
+      background: var(--accent-bg);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-top: 20px;
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+    .customer-persona-card .cp-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .customer-persona-card .cp-name {
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    .customer-persona-card .cp-situation {
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 9px;
+    }
+    .customer-persona-card .cp-quote {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+
+    /* ── Persona bar (reader's unspoken question per tab) ── */
+    .persona-bar {
+      background: #eeeeee;
+      border-left: 3px solid var(--dim);
+      border-radius: 0 6px 6px 0;
+      padding: 10px 16px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
+      line-height: 1.5;
+    }
+    .persona-who {
+      font-weight: 700;
+      color: var(--dim);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .persona-q {
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    /* ── Marcus aside ── */
+    .marcus-aside {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--muted);
+      margin-top: 14px;
+      margin-bottom: 4px;
+      padding-left: 12px;
+      border-left: 2px solid var(--border);
+      line-height: 1.55;
+    }
   </style>
 </head>
 <body>
@@ -828,6 +909,8 @@
       <span class="cover-badge">Agent PM Hypothesis</span>
       <span class="cover-sep">·</span>
       <span class="cover-role">Agent Product Manager · Netic</span>
+      <span class="cover-sep">·</span>
+      <span class="reader-tag">Written for Melisa Tokmak &amp; the Netic team</span>
     </div>
     <div class="cover-body">
       <div class="cover-left">
@@ -835,6 +918,12 @@
         <hr class="cover-rule">
         <div class="cover-hypothesis-label">Hypothesis</div>
         <p class="cover-hypothesis-text">Netic has solved first-mile — customer to booked job. The gap is the <span class="cover-highlight">technician data black hole</span>. Intelligence from the Netic Brain stops at the dispatcher. Technicians arrive blind, upsells are inconsistent, and post-job outcomes never feed back to improve the Cultivate Engine. Netic optimizes for job count — the opportunity is job value.</p>
+        <div class="customer-persona-card">
+          <div class="cp-label">The customer this is about</div>
+          <div class="cp-name">Marcus Rivera · Owner, 12-truck HVAC operation · Dallas, TX</div>
+          <div class="cp-situation">Netic customer for 8 months. Bookings up ~30%. Best tech left last month. New techs inconsistent on upsells. At the last QBR, Marcus couldn't answer "what's your average job value?"</div>
+          <div class="cp-quote">"The bookings went up. That part's working. But I couldn't tell you what happened to the job value."</div>
+        </div>
         <p class="cover-disclaimer">I may be wrong on some of this. That's what the conversation is for.</p>
       </div>
       <div class="cover-card">
@@ -855,6 +944,10 @@
        TAB 1 · THE PROBLEM
        ════════════════════════════════════════ -->
   <div class="tab-panel active" id="tab-0">
+    <div class="persona-bar">
+      <span class="persona-who">Melisa is thinking:</span>
+      <span class="persona-q">"Is this gap actually significant at Netic's scale — or is this an edge case dressed up as a thesis?"</span>
+    </div>
     <div class="hero">
       <div class="tab-eyebrow">01 — The Problem</div>
       <h1>Netic booked 50,000 jobs.<br>But how many left $400 on the table?</h1>
@@ -899,6 +992,8 @@
       </div>
     </div>
 
+    <p class="marcus-aside">Marcus's technicians ran ~340 jobs in 8 months. He doesn't know how many left a filter upgrade or membership on the table — because nobody tracked it.</p>
+
     <div class="section-header">Why it matters now — the Series B pressure</div>
     <div class="callout">
       <strong>The enterprise motion changes the benchmark.</strong> Netic's Series B funds the push into multi-year, multi-product enterprise relationships. Enterprise customers don't renew on "jobs booked." They renew on job-level ROI — average job value up, membership conversion up, upsell attach rate improving. A QBR that shows booking counts is a weak story. One that shows "avg job value up since onboarding Netic, and here's what moved it" is a renewal.
@@ -919,6 +1014,10 @@
        TAB 2 · ROOT CAUSE
        ════════════════════════════════════════ -->
   <div class="tab-panel" id="tab-1">
+    <div class="persona-bar">
+      <span class="persona-who">Melisa is thinking:</span>
+      <span class="persona-q">"Have they looked at our actual product — or are they pattern-matching from somewhere else?"</span>
+    </div>
     <div class="hero">
       <div class="tab-eyebrow">02 — Root Cause</div>
       <h1>The pipeline has a black hole.<br>It lives between dispatch and the Cultivate Engine.</h1>
@@ -941,6 +1040,8 @@
       <div class="pipe-arrow">→</div>
       <div class="pipe-node active-node">Cultivate Engine<small>Outbound targeting</small></div>
     </div>
+    <p class="marcus-aside">Marcus's dispatcher got the Netic booking confirmation. Marcus's tech left the shop. Nothing passed between them.</p>
+
     <p style="font-size:13px; color:var(--muted); margin-bottom: 16px;">The amber nodes are where the artifact focuses — both are inferred from the absence of any technician-side features in public product descriptions. See Tab 6.</p>
     <div class="callout" style="margin-bottom: 24px;">
       <strong>Competitive context worth naming:</strong> ServiceTitan (dominant FSM in HVAC) has a technician mobile app with customer history and job notes. The differentiation Netic can credibly claim is AI-native reasoning — not static records a tech scrolls through, but real-time synthesis of equipment age, weather signals, and conversion history surfaced at the right moment. That's the layer ServiceTitan can't retrofit without rearchitecting their data model.
@@ -982,6 +1083,10 @@
        TAB 3 · THE FRAMEWORK
        ════════════════════════════════════════ -->
   <div class="tab-panel" id="tab-2">
+    <div class="persona-bar">
+      <span class="persona-who">Melisa is thinking:</span>
+      <span class="persona-q">"Would adding this break the booking stack we've spent two years building?"</span>
+    </div>
     <div class="hero">
       <div class="tab-eyebrow">03 — The Framework</div>
       <h1>Not a rebuild. An extension.<br>Three phases to close the loop.</h1>
@@ -1019,6 +1124,8 @@
         </tr>
       </tbody>
     </table>
+    <p class="marcus-aside" style="margin-top:16px;">Phase 1 costs Marcus nothing. His techs just show up knowing more than they did yesterday.</p>
+
     <p style="font-size:13px; color:var(--muted); margin-top:8px; margin-bottom:0;">Phasing prioritizes zero disruption to the existing booking flow. Each phase ships independently and is independently measurable.</p>
 
     <div class="section-header">Before and after</div>
@@ -1070,6 +1177,10 @@
        TAB 4 · METRICS
        ════════════════════════════════════════ -->
   <div class="tab-panel" id="tab-3">
+    <div class="persona-bar">
+      <span class="persona-who">Melisa is thinking:</span>
+      <span class="persona-q">"Do they know how to measure this in messy field-service reality — not a clean product environment?"</span>
+    </div>
     <div class="hero">
       <div class="tab-eyebrow">04 — Metrics</div>
       <h1>How I'd know if the hypothesis is right.<br>And exactly how I'd know if it isn't.</h1>
@@ -1099,6 +1210,8 @@
         <p>Did AI-targeted outreach convert? Measured before (open-loop baseline) vs. after (closed-loop with field feedback). This is the proof that closing the loop improves the targeting model.</p>
       </div>
     </div>
+
+    <p class="marcus-aside">Marcus's question at 90 days: "Can I walk into a QBR and answer what's my average job value — and show it moved?" That's the north star. Everything else is instrumentation.</p>
 
     <div class="section-header">Weekly leading indicators (health checks)</div>
     <div class="li-list">
@@ -1162,6 +1275,10 @@
        TAB 5 · WHY ME
        ════════════════════════════════════════ -->
   <div class="tab-panel" id="tab-4">
+    <div class="persona-bar">
+      <span class="persona-who">Melisa is thinking:</span>
+      <span class="persona-q">"Has this person shipped anything with real stakes — or is this all demos and consulting decks?"</span>
+    </div>
     <div class="hero">
       <div class="tab-eyebrow">05 — Why Me</div>
       <h1>I'm not pitching for the role.<br>I'm opening a conversation about whether this hypothesis is right.</h1>
@@ -1191,6 +1308,8 @@
         <div class="proj-why">Architecting agents that operate on messy, real-world physical data — not toy demos. The challenge in field service AI is that the data is noisy, the environments are unpredictable, and the agent has to be right the first time because the tech is standing at someone's door.</div>
       </div>
     </div>
+
+    <p class="marcus-aside">Marcus's situation is the exact environment I've worked in — messy FSM data, technicians who won't tolerate slow tools, and an owner who needs a story he can tell at renewal time.</p>
 
     <div class="section-header">JD match — specific, not generic</div>
     <table class="jd-table">
@@ -1237,6 +1356,10 @@
        TAB 6 · EVIDENCE
        ════════════════════════════════════════ -->
   <div class="tab-panel" id="tab-5">
+    <div class="persona-bar">
+      <span class="persona-who">Melisa is thinking:</span>
+      <span class="persona-q">"Are they being intellectually honest — or telling me what I want to hear?"</span>
+    </div>
     <div class="hero">
       <div class="tab-eyebrow">06 — Evidence</div>
       <h1>What's confirmed. What's inferred.<br>And how to tell the difference.</h1>
