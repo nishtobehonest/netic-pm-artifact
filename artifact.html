@@ -854,6 +854,68 @@
       color: var(--muted);
     }
 
+    /* ── Testimonials ── */
+    .testimonials-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      margin-top: 44px;
+    }
+
+    .testimonials-header a {
+      font-size: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .testimonials-header a:hover { text-decoration: underline; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 680px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .testimonial-quote {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--text);
+      font-style: italic;
+      flex: 1;
+    }
+
+    .testimonial-quote::before { content: '\201C'; }
+    .testimonial-quote::after  { content: '\201D'; }
+
+    .testimonial-person { border-top: 1px solid var(--border); padding-top: 14px; }
+
+    .testimonial-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .testimonial-title {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
     /* ── Marcus aside ── */
     .marcus-aside {
       font-size: 13px;
@@ -1311,6 +1373,27 @@
     </div>
 
     <p class="marcus-aside">Marcus's situation is the exact environment I've worked in — messy FSM data, technicians who won't tolerate slow tools, and an owner who needs a story he can tell at renewal time.</p>
+
+    <div class="testimonials-header">
+      <span class="section-header" style="margin-top:0; margin-bottom:0;">What people say</span>
+      <a href="https://linkedin.com/in/nishchay-v" target="_blank">View on LinkedIn →</a>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-quote">No matter how complex or ambiguous the challenge, he approaches it calmly, breaks it down, and finds a clear path forward. I always had full confidence in him to execute with excellence and lead initiatives from start to finish.</div>
+        <div class="testimonial-person">
+          <div class="testimonial-name">Abhiroop Bhatnagar</div>
+          <div class="testimonial-title">Agentic AI Leader · Direct Manager</div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">He is one of the most focused and structured individuals I have ever met. He has a deep understanding of product requirements and knows how to guide and manage teams effectively to achieve the desired outcomes.</div>
+        <div class="testimonial-person">
+          <div class="testimonial-name">Rajtosh Ranjan</div>
+          <div class="testimonial-title">Software Engineer · Aereo</div>
+        </div>
+      </div>
+    </div>
 
     <div class="section-header">JD match — specific, not generic</div>
     <table class="jd-table">
